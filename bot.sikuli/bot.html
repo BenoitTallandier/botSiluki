@@ -1,0 +1,203 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }
+
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>bot.sikuli</h2> <a href="bot.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+<span class="kw">from</span> xml.dom <span class="kw">import</span> minidom
+<span class="kw">from</span> time <span class="kw">import</span> <span class="skw">sleep</span>
+
+<span class="kw">def</span> changeMap(i):
+<span class="cmt">#  1</span>
+<span class="cmt">#2   0</span>
+<span class="cmt">#  3</span>
+    <span class="kw">def</span> waitMap():
+        <span class="kw">while</span> <span class="kw">not</span> exists(<img src="chargement-2.png" />):
+            <span class="skw">sleep</span>(<span class="dig">0.1</span>)
+        <span class="kw">while</span> exists(<img src="chargement-2.png" />):
+            <span class="skw">sleep</span>(<span class="dig">0.1</span>)
+
+    <span class="kw">def</span> top():
+        <span class="skw">click</span>(Location(<span class="dig">644</span>, <span class="dig">63</span>))
+
+    <span class="kw">def</span> bottom():
+        <span class="skw">click</span>(Location(<span class="dig">688</span>, <span class="dig">750</span>))
+
+    <span class="kw">def</span> left():
+        <span class="skw">click</span>(Location(<span class="dig">123</span>, <span class="dig">383</span>))
+
+    <span class="kw">def</span> right():
+        <span class="skw">click</span>(Location(<span class="dig">1154</span>, <span class="dig">418</span>))
+
+    <span class="kw">if</span>(i==<span class="str">"0"</span>):
+        right()
+    <span class="kw">elif</span>(i==<span class="str">"1"</span>):
+        top()
+    <span class="kw">elif</span>(i==<span class="str">"2"</span>):
+        left()
+    <span class="kw">elif</span>(i==<span class="str">"3"</span>):
+        bottom()
+    <span class="kw">else</span>:
+        <span class="skw">popup</span>(<span class="str">"erreur"</span>)
+    waitMap()
+
+<span class="kw">def</span> loadChemin():
+    directions = []
+    xmldoc = minidom.parse(<span class="str">"chemin.xml"</span>)
+    <span class="kw">if</span> xmldoc.toxml() == <span class="str">""</span>:
+        <span class="skw">popup</span>(<span class="str">"erreur chargement chemin"</span>)
+        <span class="kw">return</span>
+    maps = xmldoc.getElementsByTagName(<span class="str">"map"</span>)
+    <span class="kw">for</span> map <span class="kw">in</span> maps:
+        direction = map.childNodes[<span class="dig">1</span>].firstChild.nodeValue
+        directions.append(direction)
+    <span class="skw">popup</span>(<span class="str">"Chemin chargé"</span>)
+    <span class="kw">return</span> directions
+
+
+
+<span class="kw">def</span> coupe():
+    img = <img src="1488879785774.png" />
+
+
+    test = exists(img)
+    prevClick = (<span class="dig">0</span>,<span class="dig">0</span>)
+    newClick = (<span class="dig">0</span>,<span class="dig">0</span>)
+
+
+    <span class="kw">while</span>( test ):
+        hover(img)
+        prevClick = newClick
+        newClick = Env.getMouseLocation()
+        <span class="kw">if</span>(prevClick != newClick):
+           <span class="skw">click</span>(img)
+        <span class="skw">sleep</span>(<span class="dig">1</span>)
+        levelup()
+        plein()
+        test = exists(img)
+
+
+<span class="kw">def</span> miseEnVente():
+    <span class="skw">click</span>(<img src="1488880250950.png" />)
+    <span class="kw">while</span>(exists(<img src="1488881154036.png" />)):
+        <span class="skw">click</span>(<img src="1488881194120.png" />)
+        <span class="skw">sleep</span>(<span class="dig">1</span>)
+        <span class="skw">click</span>(<img src="1488880250950.png" />)
+
+
+    <span class="skw">sleep</span>(<span class="dig">1</span>)
+    <span class="skw">click</span>(<img src="1488880263983.png" />)
+    <span class="skw">sleep</span>(<span class="dig">1</span>)
+    <span class="skw">click</span>(<img src="1488880844810.png" />)
+    <span class="skw">sleep</span>(<span class="dig">1</span>)
+    Region(<span class="dig">383</span>,<span class="dig">66</span>,<span class="dig">375</span>,<span class="dig">408</span>)
+    <span class="skw">click</span>(<img src="1488880566263.png" />)
+    <span class="skw">sleep</span>(<span class="dig">1</span>)
+    <span class="skw">click</span>(<img src="1488880350226.png" />)
+    <span class="skw">sleep</span>(<span class="dig">1</span>)
+    <span class="skw">click</span>(<img src="1488880356025.png" />)
+    <span class="skw">sleep</span>(<span class="dig">1</span>)
+    <span class="skw">click</span>(<img src="1488880364614.png" />)
+    <span class="skw">sleep</span>(<span class="dig">1</span>)
+    <span class="skw">click</span>(<img src="1488880374744.png" />)
+    <span class="skw">sleep</span>(<span class="dig">1</span>)
+    <span class="skw">click</span>(<img src="1488880425832.png" />)
+    <span class="skw">sleep</span>(<span class="dig">1</span>)
+    <span class="skw">click</span>(<img src="1488880441413.png" />)
+    <span class="skw">sleep</span>(<span class="dig">1</span>)
+    <span class="skw">click</span>(<img src="1488880455398.png" />)
+
+
+
+
+
+
+
+<span class="kw">def</span> plein():
+    <span class="kw">if</span> exists(<img src="plein.png" />):
+        miseEnVente()
+
+
+<span class="kw">def</span> levelup():
+    <span class="kw">if</span> exists(<img src="1488812866850.png" />):
+        <span class="skw">click</span>(<img src="1488812885683.png" />)
+
+
+<span class="kw">def</span> main():
+    directions = loadChemin()
+
+    <span class="kw">for</span> i <span class="kw">in</span> directions:
+        coupe()
+        changeMap(i)
+
+
+main()
+</pre>
+</body>
+</html>
