@@ -1,0 +1,64 @@
+<chemin>
+  <map>
+    <direction>2</direction>
+    <coordonee>5,7</coordonee>
+  </map>
+  <map>
+    <direction>3</direction>
+    <coordonee>4,7</coordonee>
+  </map>
+  <map>
+    <direction>0</direction>
+    <coordonee>4,8</coordonee>
+  </map>
+  <map>
+    <direction>2</direction>
+    <coordonee>5,8</coordonee>
+  </map>
+  <map>
+    <direction>2</direction>
+    <coordonee>4,8</coordonee>
+  </map>
+  <map>
+    <direction>2</direction>
+    <coordonee>3,8</coordonee>
+  </map>
+  <map>
+    <direction>2</direction>
+    <coordonee>2,8</coordonee>
+  </map>
+  <map>
+    <direction>2</direction>
+    <coordonee>1,8</coordonee>
+  </map>
+  <map>
+    <direction>3</direction>
+    <coordonee>0,8</coordonee>
+  </map>
+  <map>
+    <direction>0</direction>
+    <coordonee>0,9</coordonee>
+  </map>
+  <map>
+    <direction>0</direction>
+    <coordonee>1,9</coordonee>
+  </map>
+  <map>
+    <direction>0</direction>
+    <coordonee>2,9</coordonee>
+  </map>
+  <map>
+    <direction>0</direction>
+    <coordonee>3,9</coordonee>
+  </map>
+  <map>
+    <direction>0</direction>
+    <coordonee>4,9</coordonee>
+  </map>
+
+
+
+
+
+
+</chemin>

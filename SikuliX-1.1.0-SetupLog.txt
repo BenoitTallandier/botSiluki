@@ -1,0 +1,125 @@
+[debug (06/03/17 13:19:18)] Debug: setLogFile: /home/benoit/Documents/bot/SikuliX-1.1.0-SetupLog.txt
+[debug (06/03/17 13:19:18)] RunSetup: ... starting with no args given
+[debug (06/03/17 13:19:18)] RunSetup: Setup: 1.1.0 2015-10-06_17:22 in folder:
+/home/benoit/Documents/bot
+[debug (06/03/17 13:19:18)] RunSetup: RunningSystem: Linux 4.4.0-64-generic (0 Ubuntu 16.04)
+[debug (06/03/17 13:19:18)] RunSetup: parent of jar/classes: /home/benoit/Documents/bot
+[debug (06/03/17 13:19:18)] RunSetup: RunningJava: Java 8 (amd64) 1.8.0_121-8u121-b13-0ubuntu1.16.04.2-b13
+[debug (06/03/17 13:19:18)] init user preferences
+[debug (06/03/17 13:19:30)] RunSetup: 
+popAsk: --------------------
+The following file(s) will be downloaded to
+/home/benoit/Documents/bot
+--- Native support libraries for Linux (sikulixlibs...)
+--- Package 1 ---
+sikulixsetupIDE-1.1.0-forsetup.jar (IDE/Scripting)
+sikulixsetupAPI-1.1.0-forsetup.jar (Java API)
+ - with Jython
+Only click NO, if you want to terminate setup now!
+Click YES even if you want to use local copies in Downloads!
+--------------------
+[debug (06/03/17 13:19:36)] RunSetup: 
+popAsk: --------------------
+You have for Linux native libs
+/home/benoit/.Sikulix/SikulixDownloads_201510061722/sikulixlibslux-1.1.0.jar
+Click YES, if you want to use this for setup processing
+... or click NO, to ignore it and download a fresh copy
+--------------------
+[debug (06/03/17 13:19:40)] FileManager: Downloading sikulixlibslux-1.1.0.jar having 1288 KB
+[debug (06/03/17 13:19:41)] FileManager: downloaded 1288 KB to:
+/home/benoit/.Sikulix/SikulixDownloads_201510061722/sikulixlibslux-1.1.0.jar
+[debug (06/03/17 13:19:41)] FileManager: download time: 0
+[debug (06/03/17 13:19:44)] RunSetup: Copied from Downloads: sikulixlibslux
+[debug (06/03/17 13:19:44)] RunTimeSETUP: addToClasspath:
+file:/home/benoit/Documents/bot/sikulixlibslux.jar
+*** classpath dump sikulix
+  0: /home/benoit/Documents/bot/sikulixsetup-1.1.0.jar
+  1: /home/benoit/Documents/bot/sikulixlibslux.jar
+*** classpath dump end
+[debug (06/03/17 13:19:44)] RunSetup: checking usability of bundled/provided libs
+[debug (06/03/17 13:19:44)] RunTimeSETUP: exists libs folder at: /home/benoit/.Sikulix/SikulixLibs_201510061722
+[debug (06/03/17 13:19:45)] RunTimeSETUP: loadLib: libVisionProxy.so
+[debug (06/03/17 13:19:47)] FileManager: Downloading sikulixsetupAPI-1.1.0-forsetup.jar having 2083 KB
+[debug (06/03/17 13:19:51)] FileManager: downloaded 2083 KB to:
+/home/benoit/.Sikulix/SikulixDownloads_201510061722/sikulixsetupAPI-1.1.0-forsetup.jar
+[debug (06/03/17 13:19:51)] FileManager: download time: 1
+[debug (06/03/17 13:19:54)] RunSetup: Copied from Downloads: sikulixapi
+[debug (06/03/17 13:19:58)] FileManager: Downloading sikulixsetupIDE-1.1.0-forsetup.jar having 3858 KB
+[debug (06/03/17 13:20:21)] FileManager: downloaded 3858 KB to:
+/home/benoit/.Sikulix/SikulixDownloads_201510061722/sikulixsetupIDE-1.1.0-forsetup.jar
+[debug (06/03/17 13:20:21)] FileManager: download time: 6
+[debug (06/03/17 13:20:24)] RunSetup: Copied from Downloads: sikulix
+[debug (06/03/17 13:20:24)] RunSetup: 
+popAsk: --------------------
+If you click YES, you will get Jython version 2.7.0 (recommended)
+... but there is an issue with some rare UTF-8/Unicode situations,
+that usually appear on startup with UTF-8 ccharacters
+somewhere in the system environment
+If you encounter such problems with Jython 2.7.0
+run setup again and
+click NO to get Jython 2.5.4rc1
+--------------------
+[debug (06/03/17 13:21:10)] FileManager: Downloading jython-standalone-2.7.0.jar having 36154 KB
+[debug (06/03/17 13:21:20)] FileManager: downloaded 36154 KB to:
+/home/benoit/.Sikulix/SikulixDownloads/jython-standalone-2.7.0.jar
+[debug (06/03/17 13:21:20)] FileManager: download time: 9
+[debug (06/03/17 13:21:23)] RunSetup: Copied from Downloads: Jython
+[debug (06/03/17 13:21:23)] RunSetup: Download ended
+[debug (06/03/17 13:21:23)] RunSetup: Downloads for selected options:
+sikulixlibslux-1.1.0.jar sikulixsetupIDE-1.1.0-forsetup.jar sikulixsetupAPI-1.1.0-forsetup.jar jython-standalone-2.7.0.jar 
+[debug (06/03/17 13:21:23)] RunSetup: adding needed stuff to sikulix.jar
+[debug (06/03/17 13:21:23)] FileManager: buildJar: sikulixtemp.jar
+[debug (06/03/17 13:21:23)] FileManager: buildJar: adding: sikulix.jar
+[debug (06/03/17 13:21:25)] FileManager: buildJar: adding: sikulixapi.jar
+[debug (06/03/17 13:21:25)] FileManager: buildJar: adding: sikulixjython.jar
+[debug (06/03/17 13:21:39)] FileManager: buildJar: adding: sikulixlibslux.jar
+[debug (06/03/17 13:21:42)] FileManager: buildJar: completed
+[debug (06/03/17 13:21:42)] RunSetup: renaming sikulixtemp.jar to target jar: sikulix.jar
+[debug (06/03/17 13:21:42)] RunSetup: processing commandfiles
+[debug (06/03/17 13:21:42)] RunTimeSETUP: addToClasspath:
+file:/home/benoit/Documents/bot/sikulix.jar
+[debug (06/03/17 13:21:42)] RunTimeSETUP: exists libs folder at: /home/benoit/.Sikulix/SikulixLibs_201510061722
+[debug (06/03/17 13:21:42)] RunSetup: Jython: Trying to run functional test: running script statements via SikuliScript
+[debug (06/03/17 13:21:47)] ScriptingSupport: initScriptingSupport: enter
+[debug (06/03/17 13:21:52)] JythonSupport: init: starting
+[debug (06/03/17 13:21:52)] JythonSupport: init: success
+[debug (06/03/17 13:21:52)] JythonSupport: ***** Jython sys.path
+ 0: /home/benoit/Documents/bot/Lib
+ 1: /home/benoit/Documents/bot/sikulix.jar/Lib
+ 2: __classpath__
+ 3: __pyclasspath__/
+[debug (06/03/17 13:21:52)] JythonSupport: ***** Jython sys.path end
+[debug (06/03/17 13:21:52)] Jython: sikuli: Sikuli: starting init
+[debug (06/03/17 13:21:54)] Mouse: init
+[debug (06/03/17 13:21:54)] KeyBoard: init
+[debug (06/03/17 13:21:54)] Jython: requested to use as default region: R[0,0 1366x768]@S(0)
+[debug (06/03/17 13:21:54)] Jython: sikuli: Sikuli: ending init
+[debug (06/03/17 13:21:54)] JythonScriptRunner: running Jython 2.7.0 
+[debug (06/03/17 13:21:54)] ScriptingSupport: initScriptingSupport: added: jython
+[debug (06/03/17 13:21:54)] ScriptingSupport: initScriptingSupport: exit with defaultrunner: jython (py)
+[debug (06/03/17 13:21:54)] Jython: requested to use as default region: R[0,0 1366x768]@S(0)
+[debug (06/03/17 13:21:55)] JythonScriptRunner: runPython: running statements
+[debug (06/03/17 13:21:55)] Image: BufferedImage: (100, 100)
+[debug (06/03/17 13:21:55)] Finder: Image: __BufferedImage__: (100x100)
+[debug (06/03/17 13:21:55)] Sikulix: testSetup: Finder setup with image worked
+[debug (06/03/17 13:21:55)] FileManager: tempfile create:
+/tmp/Sikulix_634525750/sikuli-6977837555011294111.png
+[debug (06/03/17 13:21:55)] Image: loaded: /tmp/Sikulix_634525750/sikuli-6977837555011294111.png (file:/tmp/Sikulix_634525750/sikuli-6977837555011294111.png)
+[debug (06/03/17 13:21:55)] Image: cached: /tmp/Sikulix_634525750/sikuli-6977837555011294111.png (29 KB) (# 1 KB 29 -- 0 % of 64 MB)
+[debug (06/03/17 13:21:55)] Sikulix: testSetup: Finder setup with image file worked
+[debug (06/03/17 13:21:55)] Region: find: waiting 3,0 secs for /tmp/Sikulix_634525750/sikuli-6977837555011294111.png to appear in S(0)[0,0 1366x768]
+[debug (06/03/17 13:21:55)] Image: reused: /tmp/Sikulix_634525750/sikuli-6977837555011294111.png (file:/tmp/Sikulix_634525750/sikuli-6977837555011294111.png)
+[debug (06/03/17 13:21:56)] Region: find: /tmp/Sikulix_634525750/sikuli-6977837555011294111.png has appeared 
+at M[0,0 100x100]@S(S(0)[0,0 1366x768]) S:1,00 C:50,50 [437 msec]
+[debug (06/03/17 13:21:56)] Sikulix: testSetup: Screen.find(imagefile) worked
+[debug (06/03/17 13:21:56)] Region: find: waiting 3,0 secs for /tmp/Sikulix_634525750/sikuli-6977837555011294111.png to appear in S(0)[0,0 1366x768]
+[debug (06/03/17 13:21:56)] Image: reused: /tmp/Sikulix_634525750/sikuli-6977837555011294111.png (file:/tmp/Sikulix_634525750/sikuli-6977837555011294111.png)
+[debug (06/03/17 13:21:56)] Region: checkLastSeen: still there
+[debug (06/03/17 13:21:56)] Region: find: /tmp/Sikulix_634525750/sikuli-6977837555011294111.png has appeared 
+at M[0,0 100x100]@S(S(0)[0,0 1366x768]) S:1,00 C:50,50 [118 msec]
+[debug (06/03/17 13:21:56)] Sikulix: testSetup: repeated Screen.find(imagefile) worked
+[debug (06/03/17 13:22:01)] Sikulix: testSetup: Finder.find: worked
+[debug (06/03/17 13:22:06)] RunSetup: ... SikuliX Setup seems to have ended successfully ;-)
+[debug (06/03/17 13:22:06)] RunTimeSETUP: final cleanup
+[debug (06/03/17 13:22:06)] FileManager: deleteFileOrFolder:
+/tmp/Sikulix_634525750
